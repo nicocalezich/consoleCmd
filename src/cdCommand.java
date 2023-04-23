@@ -1,5 +1,3 @@
-package ChallengeCmd;
-
 import java.util.List;
 
 public class cdCommand implements Command {

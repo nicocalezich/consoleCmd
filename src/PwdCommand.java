@@ -1,11 +1,8 @@
-package ChallengeCmd;
-
-public class MkdirCommand implements Command {
+public class PwdCommand implements Command {
 
     private static Terminal terminal = Terminal.getInstance();
-
     @Override
     public void execute(String parameter) throws RuntimeException {
-        terminal.getCurrentDir().addDir(parameter);
+        System.out.println(terminal.getCurrentDir().getAbsolutePath());
     }
 }

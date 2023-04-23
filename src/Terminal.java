@@ -1,5 +1,3 @@
-package ChallengeCmd;
-
 public class Terminal {
 
     private Directory rootDir;

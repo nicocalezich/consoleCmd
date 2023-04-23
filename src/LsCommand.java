@@ -1,5 +1,3 @@
-package ChallengeCmd;
-
 public class LsCommand implements Command{
 
     private static Terminal terminal = Terminal.getInstance();
