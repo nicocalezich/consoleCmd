@@ -3,6 +3,7 @@ import java.util.List;
 public class cdCommand implements Command {
     private static Terminal terminal = Terminal.getInstance();
     private static String goBackParam = "..";
+
     @Override
     public void execute(String parameter) throws RuntimeException {
         Directory dir = terminal.getCurrentDir();
@@ -12,13 +13,10 @@ public class cdCommand implements Command {
             return;
         }
 
-        List<Directory> subdirs = dir.getSubdirs();
-        Directory selectedDir = subdirs.stream()
+        terminal.setCurrentDir(dir.getSubdirs().stream()
                 .filter(subdir -> subdir.getDirName().equals(parameter))
                 .findFirst()
-                .orElse(null);
-
-        terminal.setCurrentDir(selectedDir != null ? selectedDir : dir);
+                .orElse(dir));
 
     }
 }
