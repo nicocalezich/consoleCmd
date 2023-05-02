@@ -3,9 +3,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class Directory {
-    private Directory parentDir;
-    private String dirName;
-    private List<Directory> subdirs;
+    private final Directory parentDir;
+    private final String dirName;
+    private final List<Directory> subdirs;
 
 
     public Directory(Directory parentDir, String dirName) {
@@ -40,15 +40,8 @@ public class Directory {
         return dirName;
     }
 
-    public void setDirName(String dirName) {
-        this.dirName = dirName;
-    }
-
     public List<Directory> getSubdirs() {
         return subdirs;
     }
 
-    public void setSubdirs(List<Directory> subdirs) {
-        this.subdirs = subdirs;
-    }
 }
